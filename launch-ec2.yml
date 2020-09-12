@@ -1,6 +1,6 @@
 - hosts: "localhost"
   vars_files:
-          - variable/password.yml
+          - variable/password-for-iam-account.yml
   tasks:
      - name: "ANSIBLE_EC2"
        ec2:
