@@ -12,7 +12,7 @@
                instance_tags: 
                        Name: EC2_THROUGH_ANSIBLE
                vpc_subnet_id: "subnet-09678117a9fb4f6f1"
-               assign_public_ip: no
+               assign_public_ip: yes
                region: "us-west-2"
                state: present
                group_id: "sg-14e5924e"
