@@ -7,7 +7,7 @@
   gather_facts: False
 
   vars:
-    key_name: my_aws55555555555555
+    key_name: my_aws555555555555558888
     region: us-west-2
     image: ami-ea2377b8 
     id: "keypair-for-ansible"
