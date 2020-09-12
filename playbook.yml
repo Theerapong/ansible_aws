@@ -1,12 +1,13 @@
-# AWS playbook
+# AWS playbook  ttttttt
 ---
+
 
 - hosts: localhost
   connection: local
   gather_facts: False
 
   vars:
-    key_name: my_aws
+    key_name: my_aws55555555555555
     region: us-west-2
     image: ami-ea2377b8 
     id: "keypair-for-ansible"
