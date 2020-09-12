@@ -1,6 +1,6 @@
 - hosts: "localhost"
   vars_files:
-          - group_vars/all/pass.yml
+          - variable/password.yml
   tasks:
      - name: "ANSIBLE_EC2"
        ec2:
