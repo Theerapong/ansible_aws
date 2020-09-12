@@ -6,8 +6,8 @@
        ec2:
                key_name: "keypair-for-ansible"
                instance_type: "t2.micro"
-               image: "ami-0841edc20334f9287"
-               wait: yes
+               image: "ami-0157b1e4eefd91fd7"
+               wait: no ###
                count: 1
                instance_tags: 
                        Name: EC2_THROUGH_ANSIBLE
