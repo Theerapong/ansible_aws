@@ -1,0 +1,26 @@
+- hosts: "localhost"
+  vars_files:
+          - group_vars/all/pass.yml
+  tasks:
+     - name: "ANSIBLE_EC2"
+       ec2:
+               key_name: "keypair-for-ansible"
+               instance_type: "t2.micro"
+               image: "ami-0841edc20334f9287"
+               wait: yes
+               count: 1
+               instance_tags: 
+                       Name: EC2_THROUGH_ANSIBLE
+               vpc_subnet_id: "subnet-09678117a9fb4f6f1"
+               assign_public_ip: no
+               region: "us-west-2"
+               state: present
+               group_id: "sg-14e5924e"
+               aws_access_key: "{{ec2_access_key}}"
+               aws_secret_key: "{{ec2_secret_key}}"
+       register: UD
+     - debug:
+             var: UD.instances[0].private_ip
+       register: IP
+     - debug: 
+          var: IP["UD.instances[0].private_ip"] 
